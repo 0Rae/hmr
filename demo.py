@@ -191,6 +191,7 @@ def main(img_path, json_path=None):
     visualize(img_path, img, proc_param, joints[0], verts[0], cams[0])
 
 def join_csv():
+  global all_files
   path = 'hmr/output/csv/'                   
   all_files = glob.glob(os.path.join(path, "*.csv"))
   all_files.sort(key=lambda x: int(x.split('/')[-1].split('.')[0]))
